@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Employee Service</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span> Employee Service </span>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class=""> </span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            ></div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class="slider_section">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-box">
+                      <h1>Welcome to the Employee Management</h1>
+                      <p>
+                        Our Employee Management Service allows you to manage
+                        employee information efficiently. You can add new
+                        employees, view a list of all employees, search for
+                        specific employees, update employee details, and more.
+                      </p>
+                      <div class="btn-box">
+                        <a href="#add" class="btn1">Add Employees</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-box">
+                      <h1>Employee Managment Service</h1>
+                      <p>
+                        This service is designed to streamline your employee
+                        management tasks and ensure accurate and up-to-date
+                        information.
+                      </p>
+                      <div class="btn-box">
+                        <a href="#view" class="btn1"> View our Employees </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-box">
+                      <h1>Employee Managment Service</h1>
+                      <p>
+                        Our Employee Management Service allows you to manage
+                        employee information efficiently.
+                      </p>
+                      <div class="btn-box">
+                        <a href="#contact" class="btn1"> Contact Us </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="carousel-indicators">
+            <li
+              data-target="#customCarousel1"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </section>
+      <!-- end slider section -->
+    </div>
+    <!-- add employee section -->
+    <section id="add" class="contact_section layout_padding">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1">
+            <div class="form_container">
+              <div class="heading_container">
+                <h1>Add Employee</h1>
+              </div>
+              <form id="addEmployeeForm">
+                <div>
+                  <input type="text" id="firstName" placeholder="First Name" />
+                </div>
+                <div>
+                  <input type="text" id="lastName" placeholder="Last Name" />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="employeeID"
+                    placeholder="Employee ID"
+                  />
+                </div>
+                <div>
+                  <select id="designation" required>
+                    <option value="Manager">Manager</option>
+                    <option value="Developer">Developer</option></select
+                  ><br />
+                  <!-- <input
+                    type="text"
+                    id="designation"
+                    placeholder="Designation"
+                  /> -->
+                  <!-- <select id="designation" placeholder="Designation">
+                  <option value="Manager">Manager</option>
+                  <option value="Developer">Developer</option>
+                </select> -->
+                </div>
+                <div id="knownLanguagesContainer">
+                  <!-- Language fields will be added here dynamically -->
+                </div>
+                <button
+                  type="button"
+                  class="ranabtn"
+                  onclick="addLanguageField()"
+                >
+                  Add Language
+                </button>
+                <div class="d-flex">
+                  <button type="button" class="btn" onclick="addEmployee()">
+                    Add
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="images/about-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end add employee section -->
+
+    <!-- view employee section -->
+    <section id="view" class="about_section layout_padding">
+      <div class="container">
+        <h1>View Employees</h1>
+
+        <table id="employeesTable">
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Designation</th>
+              <th>Known Languages</th>
+            </tr>
+          </thead>
+          <tbody id="employeesTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <!-- end view employee section -->
+
+    <!-- update employee section -->
+    <section class="update contact_section layout_padding" id="updateEmployee">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1">
+            <div class="form_container">
+              <form id="updateEmployeeForm">
+                <h1>Update Employee Designation</h1>
+                <label for="updateEmployeeID">Employee ID to Update:</label>
+                <input
+                  type="text"
+                  id="updateEmployeeID"
+                  name="updateEmployeeID"
+                  value="2000"
+                  readonly
+                /><br />
+                <label for="newDesignation">New Designation:</label>
+                <input
+                  type="text"
+                  id="newDesignation"
+                  name="newDesignation"
+                  value="Team Leader"
+                  required
+                /><br />
+                <button type="button" onclick="updateEmployee()" class="btn">
+                  Update Designation</button
+                ><br />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end update employee section -->
+
+    <!-- update employee section -->
+    <section class="update contact_section layout_padding" id="updateEmployee">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1">
+            <div class="form_container">
+              <form id="updateEmployeeForm">
+                <h1>Update Employee</h1>
+                <label for="updateEmployeeID2">Employee ID to Update:</label>
+                <input
+                  type="text"
+                  id="updateEmployeeID2"
+                  placeholder="Enter Employee ID"
+                  required
+                /><br />
+                <label for="newDesignation2">New Designation:</label>
+                <select id="newDesignation2" required>
+                  <option value="Manager">Manager</option>
+                  <option value="Developer">Developer</option></select
+                ><br />
+                <button
+                  type="button"
+                  onclick="updateEmployeeDesignation()"
+                  class="btn"
+                >
+                  Update Employee Designation</button
+                ><br />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end update employee section -->
+
+    <!-- delete section -->
+    <section class="search contact_section layout_padding" id="delete">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1">
+            <div class="form_container">
+              <form id="deleteForm">
+                <h1>Delete Employee</h1>
+                <label for="deleteEmployeeID">Employee ID to Delete:</label>
+                <input
+                  type="text"
+                  id="deleteEmployeeID"
+                  name="deleteEmployeeID"
+                  required
+                /><br />
+                <div id="displayDelete"></div>
+                <br />
+                <button
+                  type="button"
+                  onclick="deleteEmployeeById(document.getElementById('deleteEmployeeID').value)"
+                  class="btn"
+                >
+                  Delete Employee</button
+                ><br />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end delete section -->
+
+    <!-- search section -->
+    <section class="search contact_section layout_padding" id="search">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1">
+            <div class="form_container">
+              <form id="searchForm">
+                <h1>Search For Employees</h1>
+                <select id="searchKey">
+                  <!-- Default option -->
+                  <option value="">Select Search key</option>
+                  <option value="employeeID">Employee ID</option>
+                  <option value="designation">Designation</option>
+                </select>
+                <span id="searchKeyerror"></span>
+                <input
+                  type="text"
+                  placeholder="Enter search value"
+                  id="searchValue"
+                  name="search"
+                  required
+                /><br />
+                <span id="searchValueerror"></span><br />
+                <button type="button" onclick="searchEmployees()" class="btn">
+                  Search</button
+                ><br />
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <table id="employeesTable2">
+              <thead>
+                <tr>
+                  <th>Employee ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Designation</th>
+                  <th>Known Languages</th>
+                </tr>
+              </thead>
+              <tbody id="employeesTableBody2"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end search section -->
+
+    <!-- search for experts section -->
+    <section
+      class="search contact_section layout_padding"
+      id="searchJavaExperts"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1">
+            <div class="form_container">
+              <form id="searchJavaExpertsForm">
+                <h1>Search for Java Experts</h1>
+                <button type="button" onclick="searchJavaExperts()" class="btn">
+                  Search Java Experts</button
+                ><br />
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <table id="javaExpertsTable">
+              <thead>
+                <tr>
+                  <th>Employee ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Designation</th>
+                  <th>Known Languages</th>
+                </tr>
+              </thead>
+              <tbody id="javaExpertsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end search for experts section -->
+
+    <div id="contact" class="footer_container">
+      <section class="info_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="info_detail">
+                <h4>Employee Service</h4>
+                <p>
+                  Necessary, making this the first true generator on the
+                  Internet. It uses a dictionary of over 200 Latin words,
+                  combined with a handful
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mx-auto">
+              <div class="info_link_box">
+                <h4>Links</h4>
+                <div class="info_links">
+                  <a class="" href="#add"> Add </a>
+                  <a class="" href="#updateEmployee"> Update </a>
+                  <a class="" href="#delete"> Delete </a>
+                  <a class="" href="#search"> Serach </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h4>Subscribe</h4>
+              <form action="#">
+                <input type="text" placeholder="Enter email" />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-0 ml-auto">
+              <div class="info_contact">
+                <h4>Address</h4>
+                <div class="contact_link_box">
+                  <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span> Location </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>+20 1118566002</span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span> ranagaballah88@gmail.com </span>
+                  </a>
+                </div>
+              </div>
+              <div class="info_social">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer section -->
+      <footer class="footer_section">
+        <div class="container">
+          <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="">Employee Service</a>
+          </p>
+        </div>
+      </footer>
+      <!-- footer section -->
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchEmployees();
+      });
+
+      async function updateEmployee() {
+        const updateEmployeeID =
+          document.getElementById("updateEmployeeID").value;
+        const newDesignation = document.getElementById("newDesignation").value;
+
+        try {
+          const response = await fetch(
+            `employees/updateEmployee/${updateEmployeeID}?newDesignation=${newDesignation}`,
+            {
+              method: "PATCH",
+            }
+          );
+
+          if (response.ok) {
+            console.log(
+              `Employee with ID ${updateEmployeeID} updated successfully`
+            );
+            fetchEmployees(); // Refresh the table after update
+          } else {
+            console.error("Error updating employee");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+
+      async function fetchEmployees() {
+        try {
+          const response = await fetch("employees/getAllEmployees");
+          if (response.ok) {
+            const employees = await response.json();
+            viewTable(employees);
+          } else {
+            console.error("Error fetching employees");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+
+      async function searchEmployees() {
+        const searchKey = document.getElementById("searchKey").value;
+        const searchValue = document.getElementById("searchValue").value;
+
+        // Validate search criteria
+        if (!searchKey) {
+          document.getElementById("searchKeyerror").textContent =
+            "Please select a search key";
+          return;
+        } else {
+          document.getElementById("searchKeyerror").textContent = "";
+        }
+
+        if (!searchValue) {
+          document.getElementById("searchValueerror").textContent =
+            "Please enter a search value";
+          return;
+        } else {
+          document.getElementById("searchValueerror").textContent = "";
+        }
+
+        try {
+          const response = await fetch(
+            `employees/searchEmployee/${searchValue}`
+          );
+          if (response.ok) {
+            const searchResult = await response.json();
+            populateTable(searchResult);
+          } else {
+            console.error("Error searching employees");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+      function viewTable(employees) {
+        const tableBody = document.getElementById("employeesTableBody");
+
+        // Clear existing table rows
+        tableBody.innerHTML = "";
+
+        employees.forEach((employee) => {
+          const row = tableBody.insertRow();
+
+          // Insert data into cells
+          const cellEmployeeID = row.insertCell(0);
+          const cellFirstName = row.insertCell(1);
+          const cellLastName = row.insertCell(2);
+          const cellDesignation = row.insertCell(3);
+          const cellKnownLanguages = row.insertCell(4);
+
+          cellEmployeeID.textContent = employee.employeeID;
+          cellFirstName.textContent = employee.firstName;
+          cellLastName.textContent = employee.lastName;
+          cellDesignation.textContent = employee.designation;
+
+          // Format Known Languages as a comma-separated string
+          const knownLanguages = employee.knownLanguages
+            .map(
+              (language) =>
+                `${language.languageName} (${language.scoreOutof100})`
+            )
+            .join(", ");
+          cellKnownLanguages.textContent = knownLanguages;
+        });
+      }
+
+      function populateTable(employees) {
+        const tableBody = document.getElementById("employeesTableBody2");
+
+        // Clear existing table rows
+        tableBody.innerHTML = "";
+
+        employees.forEach((employee) => {
+          const row = tableBody.insertRow();
+
+          // Insert data into cells
+          const cellEmployeeID = row.insertCell(0);
+          const cellFirstName = row.insertCell(1);
+          const cellLastName = row.insertCell(2);
+          const cellDesignation = row.insertCell(3);
+          const cellKnownLanguages = row.insertCell(4);
+
+          cellEmployeeID.textContent = employee.employeeID;
+          cellFirstName.textContent = employee.firstName;
+          cellLastName.textContent = employee.lastName;
+          cellDesignation.textContent = employee.designation;
+
+          // Format Known Languages as a comma-separated string
+          const knownLanguages = employee.knownLanguages
+            .map(
+              (language) =>
+                `${language.languageName} (${language.scoreOutof100})`
+            )
+            .join(", ");
+          cellKnownLanguages.textContent = knownLanguages;
+        });
+      }
+
+      function addLanguageField() {
+        const container = document.getElementById("knownLanguagesContainer");
+
+        const languageField = document.createElement("div");
+        languageField.innerHTML = `
+      <div>
+        <br/>
+        <input type="text" class="languageName" placeholder="Language Name" />
+      </div>
+      <div>
+        <input type="text" class="scoreOutof100" placeholder="Score Out of 100" />
+      </div>
+    `;
+
+        container.appendChild(languageField);
+      }
+      async function addEmployee() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const employeeID = document.getElementById("employeeID").value;
+        const designation = document.getElementById("designation").value;
+
+        const knownLanguages = [];
+        const languageFields = document.getElementsByClassName("languageName");
+        const scoreFields = document.getElementsByClassName("scoreOutof100");
+
+        for (let i = 0; i < languageFields.length; i++) {
+          const languageName = languageFields[i].value;
+          const scoreOutof100 = parseInt(scoreFields[i].value);
+
+          knownLanguages.push({
+            languageName: languageName,
+            scoreOutof100: scoreOutof100,
+          });
+        }
+
+        const employeeData = {
+          firstName: firstName,
+          lastName: lastName,
+          employeeID: parseInt(employeeID),
+          designation: designation,
+          knownLanguages: knownLanguages,
+        };
+        try {
+          const response = await fetch("/employees/addEmployee", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(employeeData),
+          });
+
+          if (response.ok) {
+            // Employee added successfully, you can handle the response here
+            console.log("Employee added successfully");
+            fetchEmployees();
+          } else {
+            // Handle error response
+            console.error("Error adding employee");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+      async function deleteEmployeeById(employeeID) {
+        try {
+          const response = await fetch(
+            `employees/deleteEmployee/${employeeID}`,
+            {
+              method: "DELETE",
+            }
+          );
+
+          if (response.ok) {
+            console.log(`Employee with ID ${employeeID} deleted successfully`);
+            fetchEmployees(); // Refresh the table after deletion
+          } else {
+            console.error("Error deleting employee");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+
+      async function searchJavaExperts() {
+        try {
+          const response = await fetch("employees/java-experts");
+          if (response.ok) {
+            const javaExperts = await response.json();
+            javaexpertTable(javaExperts);
+          } else {
+            console.error("Error searching for Java experts");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+
+      function javaexpertTable(javaExperts) {
+        const tableBody = document.getElementById("javaExpertsTableBody");
+
+        // Clear existing table rows
+        tableBody.innerHTML = "";
+
+        javaExperts.forEach((javaExpert) => {
+          const row = tableBody.insertRow();
+
+          // Insert data into cells
+          const cellEmployeeID = row.insertCell(0);
+          const cellFirstName = row.insertCell(1);
+          const cellLastName = row.insertCell(2);
+          const cellDesignation = row.insertCell(3);
+          const cellKnownLanguages = row.insertCell(4);
+
+          cellEmployeeID.textContent = javaExpert.employeeID;
+          cellFirstName.textContent = javaExpert.firstName;
+          cellLastName.textContent = javaExpert.lastName;
+          cellDesignation.textContent = javaExpert.designation;
+
+          // Format Known Languages as a comma-separated string
+          const knownLanguages = javaExpert.knownLanguages
+            .filter(
+              (language) =>
+                language.languageName.toLowerCase() === "java" &&
+                language.scoreOutof100 > 50
+            )
+            .map(
+              (language) =>
+                `${language.languageName} (${language.scoreOutof100})`
+            )
+            .join(", ");
+
+          cellKnownLanguages.textContent = knownLanguages;
+        });
+      }
+      function updateEmployeeDesignation() {
+        const employeeID = document.getElementById("updateEmployeeID2").value;
+        const newDesignation = document.getElementById("newDesignation2").value;
+
+        // Validate input
+        if (!employeeID) {
+          alert("Please enter Employee ID");
+          return;
+        }
+
+        // You can use AJAX or fetch API to send the update request to the server
+        // Example using fetch API
+        fetch(
+          `employees/updateEmployee/${employeeID}?newDesignation=${newDesignation}`,
+          {
+            method: "PATCH",
+          }
+        )
+          .then((response) => {
+            if (response.ok) {
+              console.log(
+                `Employee with ID ${employeeID} updated successfully`
+              );
+              fetchEmployees();
+            } else {
+              console.error("Error updating employee");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
+    <!-- jQery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+  </body>
+</html>
